@@ -2,9 +2,122 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TimerActivity">
+    android:padding="16dp"
+    android:background="#F0F0F0"
+    tools:context="com.example.health_application02.WorkoutTimerActivity">
+
+    <!-- 루틴 선택 섹션 -->
+    <TextView
+        android:id="@+id/tv_routine_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="루틴"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <Spinner
+        android:id="@+id/spinner_routines"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/spinner_background"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_routine_label" />
+
+    <!-- 타이머 섹션 -->
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00 : 00"
+        android:textSize="64sp"
+        android:textStyle="bold"
+        android:textColor="#6A1B9A"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintBottom_toTopOf="@+id/btn_start_workout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_routines"
+        android:layout_marginTop="64dp" />
+
+    <ImageButton
+        android:id="@+id/btn_play_pause_timer"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_play_arrow"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_timer"
+        app:layout_constraintStart_toEndOf="@+id/tv_timer"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="@+id/tv_timer" />
+
+    <!-- 속도 표시 섹션 -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_speed_display"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btn_start_workout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_timer"
+        android:layout_marginTop="48dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_speed_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="속도"
+                android:textSize="18sp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tv_current_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                android:textColor="#6A1B9A" />
+
+            <ImageView
+                android:id="@+id/iv_running_icon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_running_man"
+                android:contentDescription="Running man icon" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- 운동 시작 버튼 -->
+    <Button
+        android:id="@+id/btn_start_workout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="운동 시작"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:background="@drawable/rounded_button_background"
+        android:paddingVertical="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="32dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

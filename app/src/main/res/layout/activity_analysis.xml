@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <com.google.android.material.tabs.TabItem
-            android:text="7일" />
+            android:text="7일"  />
         <com.google.android.material.tabs.TabItem
             android:text="30일" />
     </com.google.android.material.tabs.TabLayout>
