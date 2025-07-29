@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:background="#F0F0F0"
-    tools:context="com.example.health_application02.WorkoutTimerActivity">
+    tools:context="com.example.guru.TimerActivity">
 
     <!-- 루틴 선택 섹션 -->
     <TextView
