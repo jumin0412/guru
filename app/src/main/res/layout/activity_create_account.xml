@@ -88,8 +88,8 @@
             android:id="@+id/completeButton"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:background="@drawable/rounded_button"
             android:text="완료"
+            android:backgroundTint="@color/coblue"
             android:textColor="#FFFFFF"
             android:textStyle="bold" />
     </LinearLayout>

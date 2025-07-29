@@ -53,9 +53,8 @@
         android:text="로그인"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:backgroundTint="#5B7BE7"
-        android:textColor="#FFFFFF"
-        android:background="@drawable/rounded_button"/>
+        android:backgroundTint="@color/coblue"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/signupText"
